@@ -62,7 +62,10 @@ class immune():
 
 clonal = immune(100, 50, 0.3, 0.1) # immune(iterations, population, mutation, cloneRate)
 clonal.run()
-print(clonal.best_solution)
+print("------------------- Resultados -------------------")
+print(f"x: {clonal.best_solution[0]} y: {clonal.best_solution[1]}")
+print(f"Resultado: {clonal.best_solution[0]}")
+print("--------------------------------------------------")
 
 # Función
 valX = np.linspace(x_min, x_max, 500)

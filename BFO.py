@@ -16,7 +16,6 @@ def michalewicz(X):
 
 class BFO:
     def __init__(self, bacteria, iterations, chemotaxis):
-        # self.bacteria = np.random.uniform(low=[x_min, y_min], high=[x_max, y_max], size=(bacteria, 2))
         self.bacteria = [[np.random.uniform(x_min, x_max), random.uniform(y_min, y_max)] for i in range(bacteria)]
         self.iterations = iterations
         self.chemotaxis = chemotaxis
