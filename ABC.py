@@ -70,7 +70,7 @@ class beeHive:
         print(f"Resultado: {self.best_solution[2]}")    
         print("----------------------------------------")  
 
-hive = beeHive(100, 50, 0.5) # beeColony (iterations, bees, selection)
+hive = beeHive(100, 50, 0.5) # beeHive(iterations, bees, selection)
 hive.run()
 hive.results()
 
