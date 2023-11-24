@@ -14,7 +14,7 @@ def michalewicz(X):
         resultado -= np.sin(X[i]) * np.sin(((i + 1) * X[i]**2) / np.pi)**(2 * 10) # m=10
     return resultado
 
-class GE:
+class GA:
     def __init__(self, iterations, genes):
         self.iterations = iterations
         self.genes = [[np.random.uniform(x_min, x_max), np.random.uniform(y_min, y_max)] for i in range(genes)]
@@ -59,7 +59,7 @@ class GE:
         minimum = np.argmin(self.fitness)
         self.best_solution = [self.genes[minimum][0], self.genes[minimum][1], self.fitness[minimum]]
 
-optimization = GE(100, 50)
+optimization = GA(100, 50)
 optimization.run()
 
 # Función
@@ -72,10 +72,9 @@ ax.plot_surface(X, Y, Z, cmap="viridis")
 ax.scatter(optimization.best_solution[0], optimization.best_solution[1], optimization.best_solution[2], marker='*', color='red', s=100)
 
 # Mejores resultados
-figura = plt.figure(num="DE") 
+figura = plt.figure(num="GA") 
 plt.xlabel("Iteración")
 plt.ylabel("Minimo encontrado")
 plt.plot(optimization.evolution[0], optimization.evolution[1], color='red')
-
 
 plt.show()
